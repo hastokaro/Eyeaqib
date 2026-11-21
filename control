@@ -1,1 +1,9 @@
+Package: com.kurdistan.eyreqibintro
+Name: EyReqibIntro
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Plays Ey Reqib on GTA V launch screen until Start is tapped.
+Maintainer: Hastyar
+Author: Hastyar
+Section: Tweaks
 
