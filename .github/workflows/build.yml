@@ -15,9 +15,11 @@ jobs:
 
       - name: Setup Theos
         run: |
-          git clone --recursive https://github.com/theos/theos.git $HOME/theos
+          git clone --depth=1 https://github.com/theos/theos.git $HOME/theos
           mkdir -p $HOME/theos/sdks
-          curl -L https://github.com/xybp888/iOS-SDKs/releases/download/iOS-SDKs/iPhoneOS16.5.sdk.tar.xz | tar -xJ -C $HOME/theos/sdks
+          curl -L https://github.com/theos/sdks/archive/refs/heads/master.tar.gz -o /tmp/sdks.tar.gz
+          tar -xzf /tmp/sdks.tar.gz -C /tmp
+          mv /tmp/sdks-master/* $HOME/theos/sdks/
 
       - name: Build Dylib
         env:
